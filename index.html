@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Tuts</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body oncopy="alert('copy stop');return false;">
+    <header>
+      <h1>Food cook planner 🍗🍖🥣 
+        <a href="about.html" style="color:#fff;border:1px solid #fff;padding:2px 10px; font-size:10px; border:1px solid #fff;border-radius:3px" class="">Credits</a>
+        <a href="feedback.html" style="color:#fff;border:1px solid #fff;padding:2px 10px; font-size:10px; border:1px solid #fff;border-radius:3px" class="">Feedback</a>
+      </h1>
+    </header>
+    <main id="main">
+      <div class="input-container">
+        <input
+          name="input-foot-name"
+          type="text"
+          placeholder="I like to eat"
+          class="input-food"
+          id="input-food"
+          value=""
+        />
+        <button class="input-button" id="input-button">Save</button>
+      </div>
+      <div>
+        <div id="food-list-statastics"></div>
+        <ul class="food-container" id="food-container">
+          <!--Test-->
+          <li class="food-item veg">
+            <div>Idly</div>
+            <div class="close-btn" onclick="removeItem(event)">
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </div>
+          </li>
+          <li class="food-item veg">
+            <div>Dosa</div>
+            <div class="close-btn" onclick="removeItem(event)">
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </div>
+          </li>
+          <li class="food-item">
+            <div>Vada</div>
+            <div class="close-btn" onclick="removeItem(event)">
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
+            </div>
+          </li>
+        </ul>
+        <section class="not-found-wrap" id="no-list">
+          <img src="img/404-pages.jpg" alt="not found">
+          <h5>Content Not Found</h5>
+        </section>
+      </div>
+      
+
+    </main>
+
+    <script src="js/main.js"></script>
+    <!-- <script src="js/learning.js"></script> -->
+  </body>
+</html>
